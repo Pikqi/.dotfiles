@@ -1,0 +1,77 @@
+-- Bootstrapping
+-- Automaticly installs packer when config is clonned
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path })
+  vim.cmd [[packadd packer.nvim]]
+end
+
+-- Automaticly run PackerSync when plugins.lua is updated
+vim.cmd([[
+  augroup plugins
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
+return require('packer').startup(function(use)
+  -- manages it self
+  use 'wbthomason/packer.nvim'
+
+  -- coloscheme
+  use 'gruvbox-community/gruvbox'
+
+  -- Which key plugin for a popup with keybindings
+  use "folke/which-key.nvim"
+
+  --nvim-tree.lua file explorer plugin
+  use "kyazdani42/nvim-tree.lua"
+
+  -- Showing git signs next to line number
+  use "lewis6991/gitsigns.nvim"
+
+  -- Telescope a fuzzy searcher
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
+  -- Showing a nice looking bufferline
+  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+
+  -- Changing d and x to delete rather than cut
+  use "gbprod/cutlass.nvim"
+
+  -- Simple status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Pop up terminal
+  use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
+
+  -- LSP
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  --  CMP
+  use "yamatsum/nvim-cursorline"
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "hrsh7th/cmp-path"
+  if packer_bootstrap then
+    require('packer').sync()
+  end
+end)
