@@ -15,7 +15,7 @@ alias vim='nvim'
 
 alias ta="tmux a || tmux"
 
-alias sshpi="ssh petar@192.168.23.12"
+alias sshpi="ssh petar@pi.hole"
 
 # Alias for dotfiles git repo
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
