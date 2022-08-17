@@ -97,3 +97,7 @@ colors:
     - { index: 246, color: '#a89984' }
     - { index: 248, color: '#bdae93' }
     - { index: 250, color: '#d5c4a1' }
+# END OF COLORS
+key_bindings:
+  - { key: RBracket,           mods: Control,                         action: IncreaseFontSize }
+  - { key: LBracket,           mods: Control,                         action: DecreaseFontSize }
