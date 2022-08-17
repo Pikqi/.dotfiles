@@ -5,8 +5,20 @@ end
 
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
-  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  --filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+  --capabilities = capabilities
+}
+
+--lspconfig.eslint.setup {
+--  on_attach = on_attach
+--}
+
 
 lspconfig.pyright.setup {
   on_attach = on_attach
