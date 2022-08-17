@@ -65,6 +65,9 @@ return require('packer').startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+
+  use "jose-elias-alvarez/null-ls.nvim"
+
   --  CMP
   use "yamatsum/nvim-cursorline"
   use "hrsh7th/nvim-cmp"

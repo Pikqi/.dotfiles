@@ -3,10 +3,10 @@ if not status_ok then
   return
 end
 
-local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-end
+--local on_attach = function(client, bufnr)
+--  -- Enable completion triggered by <c-x><c-o>
+--  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+--end
 
 lspconfig.tsserver.setup {
   on_attach = on_attach,
@@ -40,4 +40,21 @@ lspconfig.sumneko_lua.setup {
 }
 lspconfig.clangd.setup {
   on_attach = on_attach
+}
+
+local status_ok, null_ls = pcall(require, "null-ls")
+if not status_ok then
+  return
+end
+
+null_ls.setup {
+  sources = {
+    null_ls.builtins.formatting.prettier
+  },
+  on_attach = function(client, bufnr)
+    if client.name == "tsserver" then
+      client.server_capabilities.document_formatting = false
+    end
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+  end,
 }
