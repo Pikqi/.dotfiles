@@ -113,7 +113,8 @@ fi
 
 # fnm
 export PATH=/home/petar/.fnm:$PATH
-eval "`fnm env`"
+# eval "`fnm env`"
+eval "$(fnm env --use-on-cd)"
 
 PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
