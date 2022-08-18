@@ -49,7 +49,8 @@ end
 
 null_ls.setup {
   sources = {
-    null_ls.builtins.formatting.prettier
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.eslint_d
   },
   on_attach = function(client, bufnr)
     if client.name == "tsserver" then
