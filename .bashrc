@@ -128,3 +128,4 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 
 shopt -s autocd
+eval "$(zoxide init bash)"

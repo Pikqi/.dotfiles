@@ -68,12 +68,17 @@ return require('packer').startup(function(use)
 
   use "jose-elias-alvarez/null-ls.nvim"
 
+	use "yamatsum/nvim-cursorline"
+
+	use "windwp/nvim-autopairs"
+use "edluffy/hologram.nvim"
+
   --  CMP
-  use "yamatsum/nvim-cursorline"
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
   use "L3MON4D3/LuaSnip" --snippet engine
   use "hrsh7th/cmp-path"
+
   if packer_bootstrap then
     require('packer').sync()
   end
