@@ -1,5 +1,5 @@
 # custom alias list
-treel(){
+tl(){
   tree -L "$1"
 }
 
@@ -15,7 +15,7 @@ alias vim='nvim'
 
 alias ta="tmux a || tmux"
 
-alias sshpi="ssh petar@pi.hole"
+alias sshpi="ssh petar@192.168.23.12"
 
 alias lg="lazygit"
 
