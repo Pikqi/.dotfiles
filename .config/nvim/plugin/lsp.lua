@@ -7,6 +7,19 @@ end
 --  -- Enable completion triggered by <c-x><c-o>
 --  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 --end
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+}
+
+lspconfig.cssmodules_ls.setup{
+on_attach = on_attach,	
+init_options = {
+		camelCase = false;
+	}
+}
 
 lspconfig.tsserver.setup {
   on_attach = on_attach,

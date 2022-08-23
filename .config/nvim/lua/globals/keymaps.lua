@@ -19,6 +19,8 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- commenting
+keymap("n", ",", ":CommentToggle<CR>", opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -64,6 +66,9 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- Comment in visual mode
+
+keymap("v", ",", ":CommentToggle<CR>", opts)
 -- Swap delete and cut in visual mode
 --keymap("v", "<leader>d", '""d', opts)
 --keymap("v", "d", '"_d', opts)
@@ -74,3 +79,5 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+keymap("x", ",", ":CommentToggle<CR>", opts)

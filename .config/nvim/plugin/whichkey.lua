@@ -91,7 +91,7 @@ local mappings = {
   q = { "<cmd>q!<CR>", "Quit" },
   c = { "<cmd>bdelete!<CR><cmd>bnext<CR>", "Quit" },
   f = { "<cmd>Telescope find_files<cr>", "Find Files" },
-
+	o = { "<cmd>CommentToggle<cr>", "Comment"} ,
   s = {
     name = "Search",
     ["b"] = {
@@ -124,6 +124,7 @@ local mappings = {
     x = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     D = { "<cmd>:Gitsigns diffthis<cr>", "Diff" },
     R = { "<cmd>:Gitsigns reset_hunk<cr>", "reset_hunk" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
   },
   l = {
     name = "LSP",

@@ -65,13 +65,14 @@ return require('packer').startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+	use 'JoosepAlviste/nvim-ts-context-commentstring'
+	use "terrortylor/nvim-comment"
 
   use "jose-elias-alvarez/null-ls.nvim"
 
 	use "yamatsum/nvim-cursorline"
 
 	use "windwp/nvim-autopairs"
-use "edluffy/hologram.nvim"
 
   --  CMP
   use "hrsh7th/nvim-cmp"
