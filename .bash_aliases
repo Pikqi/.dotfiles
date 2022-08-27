@@ -20,5 +20,5 @@ alias sshpi="ssh petar@192.168.23.12"
 alias lg="lazygit"
 
 # Alias for dotfiles git repo
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
-alias lazyconfig='lazygit --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+alias lazyconfig='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
