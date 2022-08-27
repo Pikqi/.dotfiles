@@ -1,5 +1,4 @@
 require("globals.options")
 require "globals.keymaps"
-
--- require('plugins')
+require('plugins')
 vim.cmd [[colorscheme gruvbox]]
