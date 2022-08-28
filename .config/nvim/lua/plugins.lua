@@ -80,6 +80,7 @@ return require('packer').startup(function(use)
   use "L3MON4D3/LuaSnip" --snippet engine
   use "hrsh7th/cmp-path"
 
+use 'norcalli/nvim-colorizer.lua'
   if packer_bootstrap then
     require('packer').sync()
   end
