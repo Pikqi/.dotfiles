@@ -10,8 +10,11 @@ font:
     family: Hack Nerd Font
     style: Italic
 
+window:
+  opacity: 0.85
 # Colors (Gruvbox dark)
 colors:
+  transparent_background_colors: true
   primary:
     # hard contrast background - '#1d2021'
     background: &gruvbox_dark_bg "#282828"
