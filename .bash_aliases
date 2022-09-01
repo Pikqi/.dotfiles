@@ -22,3 +22,7 @@ alias lg="lazygit"
 # Alias for dotfiles git repo
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
 alias lazyconfig='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
+
+alias r="ranger"
+alias cl="clear"
+alias bl="bluetuith"
