@@ -117,15 +117,23 @@ export PATH=/home/petar/.fnm:$PATH
 eval "$(fnm env --use-on-cd)"
 
 PATH="$HOME/.local/bin:$PATH"
-. "$HOME/.cargo/env"
-# Powerline
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
+PATH="$HOME/.cargo/bin:$PATH"
+# . "$HOME/.cargo/env"
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# Powerline
+# function _update_ps1() {
+#     PS1=$(powerline-shell $?)
+# }
+#
+# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# fi
+
+# Starship
+eval "$(starship init bash)"
+
 export EDITOR="nvim"
 shopt -s autocd
 eval "$(zoxide init bash)"
+
+source /home/petar/.config/broot/launcher/bash/br
