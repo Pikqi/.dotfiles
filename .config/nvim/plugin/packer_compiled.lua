@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/petar/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  ["hover.nvim"] = {
+    loaded = true,
+    path = "/home/petar/.local/share/nvim/site/pack/packer/start/hover.nvim",
+    url = "https://github.com/lewis6991/hover.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/petar/.local/share/nvim/site/pack/packer/start/lualine.nvim",

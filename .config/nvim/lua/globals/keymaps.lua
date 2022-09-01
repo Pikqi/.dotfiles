@@ -41,15 +41,17 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
--- Deleting and not cutting
---
---keymap("n", "x", '"_x', opts)
---keymap("n", "d", '"_d', opts)
---keymap("n", "D", '"_D', opts)
----- cutting
---keymap("n", "<leader>d", '""d', opts)
---keymap("n", "<leader>D", '""D', opts)
-
+-- Chose buffer
+keymap("n", "<A-1>", "<cmd>BufferLineGoToBuffer 1<cr>", opts)
+keymap("n", "<A-2>", "<cmd>BufferLineGoToBuffer 2<cr>", opts)
+keymap("n", "<A-3>", "<cmd>BufferLineGoToBuffer 3<cr>", opts)
+keymap("n", "<A-4>", "<cmd>BufferLineGoToBuffer 4<cr>", opts)
+keymap("n", "<A-5>", "<cmd>BufferLineGoToBuffer 5<cr>", opts)
+keymap("n", "<A-6>", "<cmd>BufferLineGoToBuffer 6<cr>", opts)
+keymap("n", "<A-7>", "<cmd>BufferLineGoToBuffer 7<cr>", opts)
+keymap("n", "<A-8>", "<cmd>BufferLineGoToBuffer 8<cr>", opts)
+keymap("n", "<A-9>", "<cmd>BufferLineGoToBuffer 9<cr>", opts)
+keymap("n", "<A-0>", "<cmd>BufferLineGoToBuffer -1<cr>", opts)
 -- Insert
 -- Move text up and down
 keymap("i", "<M-j>", "<Esc>:m .+1<CR>==gi", opts)
