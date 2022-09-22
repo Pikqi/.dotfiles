@@ -134,8 +134,8 @@ local mappings = {
 		d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Definition" },
 		i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
 	},
-	-- k = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Show info" },
-	k = { "<cmd> lua  require('hover').hover() <cr> ", "Show info" },
+	k = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Show info" },
+	-- k = { "<cmd> lua  require('hover').hover() <cr> ", "Show info" },
 
 	d = {
 		name = "Diagnostics",

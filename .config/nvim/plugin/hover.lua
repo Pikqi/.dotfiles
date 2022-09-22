@@ -11,9 +11,7 @@ hover.setup {
 		-- require('hover.providers.man')
 		-- require('hover.providers.dictionary')
 	end,
-	preview_opts = {
-		-- border = hover
-	},
+	-- border = hover
 	title = false
 }
 

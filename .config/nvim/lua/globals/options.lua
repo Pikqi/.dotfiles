@@ -1,7 +1,7 @@
 local options = {
 	backup = false, -- creates a backup file
-	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-	cmdheight = 0, -- more space in the neovim command line for displaying messages
+
+	cmdheight = 1, -- more space in the neovim command line for displaying messages
 	fileencoding = "utf-8", -- the encoding written to a file
 	hlsearch = true, -- highlight all matches on previous search pattern
 	ignorecase = true, -- ignore case in search patterns
@@ -28,6 +28,7 @@ local options = {
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
 	showmode = false,
+		clipboard="unnamedplus",
 
 }
 
