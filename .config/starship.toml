@@ -21,3 +21,6 @@ format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
 ssh_only = true
 format = "@[$localipv4](bold red) "
 disabled = false
+
+[lua]
+symbol = " "
