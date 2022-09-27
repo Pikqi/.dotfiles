@@ -12,8 +12,10 @@ alias aptup='sudo apt update && sudo apt upgrade'
 
 alias vimcheat='xdg-open https://vim.rtorr.com/'
 alias vim='nvim'
+alias nv="nvim ."
 
 alias ta="tmux a || tmux"
+alias tn="tmux new"
 
 alias sshpi="ssh petar@192.168.23.12"
 
