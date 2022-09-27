@@ -13,6 +13,11 @@ font:
 
 window:
   opacity: 0.82
+  dynamic_padding: false
+  padding:
+    x: 0
+    y: 0
+  # decorations: none
 # Colors (Gruvbox dark)
 colors:
   transparent_background_colors: true
