@@ -137,3 +137,4 @@ shopt -s autocd
 eval "$(zoxide init bash)"
 
 source /home/petar/.config/broot/launcher/bash/br
+export PATH="$(yarn global bin):$PATH"
