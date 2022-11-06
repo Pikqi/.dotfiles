@@ -66,6 +66,10 @@ bindsym $mod+o exec /usr/bin/microsoft-edge-stable
 bindsym $mod+p exec /usr/bin/microsoft-edge-dev
 bindsym $mod+n exec /usr/bin/notion-app
 
+# Autorandr
+bindsym $mod+Shift+comma exec autorandr mobile
+bindsym $mod+Shift+period exec autorandr -c
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
